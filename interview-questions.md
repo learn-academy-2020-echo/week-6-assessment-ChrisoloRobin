@@ -15,7 +15,7 @@ Then, research the question to expand on your answer. Even if you feel you have 
 
 2. Which RESTful routes must always be passed params? Why?
 
-  Your answer:
+  Your answer: 
 
   Researched answer:
 
@@ -23,27 +23,27 @@ Then, research the question to expand on your answer. Even if you feel you have 
 
 3. Name three rails generator commands. What is created by each?
 
-  Your answer:
+  Your answer: Generate model, Generate controller = > Generate a "data base" to be used for our backend, a controller creates a new view in the config folder
 
-  Researched answer:
+  Researched answer: Three generator commands are Model, Controller, and Wireframe. 
 
 
 
 4. Consider the Rails routes below. What is the name of the controller method that would be called by each route? What action would each of the controller methods perform?
 
-method="GET"    /users          
+method="GET"    /users            users#index - display all users at current index
 
-method="GET"    /users/1  
+method="GET"    /users/1          users#show - display a specific user
 
-method="GET"    /users/new
+method="GET"    /users/new        users#new - return an HTML form to create a new user
 
-method="GET"    /users/edit/1    
+method="GET"    /users/edit/1     users#edits - return a form to edit a user
 
-method="POST"   /users/       
+method="POST"   /users/           users#create - create a new user
 
-method="PUT"    /users/1      
+method="PUT"    /users/1          users#update - update a specific user
 
-method="DELETE" /users/1      
+method="DELETE" /users/1          users#destroy - delete a specific user
 
 
 
