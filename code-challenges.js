@@ -9,22 +9,23 @@ var people = [
   { name: "arthur dent", occupation: "radio employee" }
 ]
 // Expected output example: "Ford Prefect is a hitchhiker." "Zaphod Beeblebrox is a president of the galaxy." "Arthus Dent is a radio employee."
-//output- people.name.toUpperCase "is a" people.occupation
+
+//people.name.toUpperCase "is a" people.occupation
  
 
-const objects = (array) => {
+const sentence = (array) => {
   //initially map through array to obtain values within
   let firstLetterCap = array.map(value => {
-  //split names within people.name
+    //split the values(names) within people.name
     let splitNames = value.name.split(" ")
-    // console.log(individualName);
-
-     return splitNames.map(value => value.charAt(0).toUpperCase() + value.substring(1)).join(" ") + ` is a ${value.occupation}.`
+      //people.name map to capitalize only first char for both names + interpolate people.occupation
+      return splitNames.map(value => value.charAt(0).toUpperCase() + value.substring(1)).join(" ") + ` is a ${value.occupation}.`
   })
+  //return people.name.toUpperCase (+ interpolated people.occupation)
   return firstLetterCap
 }
 
-console.log(objects(people));
+console.log(sentence(people));
 
 
 // --------------------2) Create a function that takes in a mixed data array and returns an array of only the REMAINDER of the numbers when divided by 3.
@@ -44,7 +45,7 @@ const filterMod = (array) => {
   let arr = array.filter(function(n) {
     return typeof n === "number";
   });
-  //return numbers from array - map to mod every value
+  //return remainders from array - map to mod every value
   //console.log(arr.map(x => x % 3))
   return arr.map(x => x % 3)
 }
@@ -62,7 +63,9 @@ const merge = (arr1, arr2) => {
   //join the two arrays into one
   let allArr = arr1.concat(arr2)
    //console.log(allArr)
+   //return the joined array without duplicate values
   return allArr.filter((item, index) => 
+    //set every item at the index in the joined array to an index position to remove duplicate values
     //console.log(item, index)
     allArr.indexOf(item) === index
   ) 

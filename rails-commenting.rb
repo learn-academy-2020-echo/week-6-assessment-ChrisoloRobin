@@ -61,7 +61,7 @@ class BlogPostsController < ApplicationController
   # 8) Private is a built in Rails statement that protects the classes beneath it
   private
   def blog_post_params
-    # 9) strong params for the Blog Post model that require both columns in the database to contain content
+    # 9) Strong params for the Blog Post model that require both columns in the database to contain content
     params.require(:blog_post).permit(:title, :content)
   end
 
